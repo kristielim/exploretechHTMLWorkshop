@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 id="shouldBeRedText" style="color: blue">SmartyPants High School</h1>
+	<button id="doneButton">Click when done!</button>
+	<script>
+		const shouldBeRedText = document.getElementById('shouldBeRedText');
+		const doneButton = document.getElementById('doneButton');
+		doneButton.onclick = function () {
+			if (shouldBeRedText.style.color === 'red') {
+				alert('Level 2 unlocked!');
+				window.location.replace(atob('bGV2ZWwyLmh0bWw='));
+			}
+			else {
+				alert('Not everything has been changed yet :(');
+			}
+		}
+	</script>
+</body>
+</html>
