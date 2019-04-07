@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <head>
 <title>Level Two</title>
+
 </head>
 <style>
-	h1, h2, h3 {
+	h1, h2, h3{
 		color: #7CFC00;
+		font-weight: bold;
+		font-family: Courier New, monospace;
+	}
+	h4{
+		color: #7CFC00;
+		font-weight: normal;
+		font-family: Courier New, monospace;
+	}
+	h5{
+		color: #7CFC00;
+		font-size: 10px;
 		font-weight: bold;
 		font-family: Courier New, monospace;
 	}
@@ -12,49 +24,138 @@
 		color: #7CFC00;
 		font-family: Courier New, monospace;
 	}
+	li{
+		color: #7CFC00;
+		font-family: Courier New, monospace;
+	}
 	body
 	{
 		background-color: #000000;
+	}
+	.submit{
+		display: inline-block;
+	}
+	.paragraphs:hover{
+		background-color: #C0C0C0;
+
+	}
+
+	.headers:hover{
+			background-color: #C0C0C0;
+
+	}
+
+	.forms:hover{
+		background-color: #C0C0C0;
+	}
+
+	.Image:hover{
+		background-color: #C0C0C0;
+	}
+
+	.Bold:hover
+	{
+		background-color: #C0C0C0;
+	}
+
+	.List:hover
+	{
+		background-color: #C0C0C0;
+	}
+
+	.FirstStep
+	{
+		display: inline;
 	}
 	input{
 		width: 2%;
 		text-align: center;
 		align-content: center;
-		height: 30px;
+		height: 50px;
 		size: 30px;
 		font-weight: bold;
 		font-family: Arial,sans-serif;
+		border-radius: 5px;
+		margin: auto;
+		vertical-align: middle;
+
+	}
+	.startbuttn{
+		color: #FF0000;
+		height: 30px;
+		width: 30%;
+		font-family: Courier New, monospace;
 	}
 
-	.submit input{
-		width: 5%;
+	input:hover{
+		background-color: #F0E68C;
+		opacity: 0.8;
+	}
+
+	.submit button{
+		width: 15%;
 		text-align: center;
 		background-color: #FF0000;
 		align-content: center;
 		height: 15px;
+		border-radius: 25px;
+		margin-top: 5px;
+		font-family: Courier New, monospace;
+
 	}
 	form{
 		align-items: center;
-	}
-
 </style>
 <body>
+	<script src = "lev2Functions.js"></script>
 	<h1> Top Secret Spy Service </h1>
 	<p>Your mission, if you choose to accept it is to find the three mystery numbers and input them into the secret code bar below! If your code is correct, you will advance to the next round. Good luck!</p>
+	<h2> MEET YOUR ELEMENTS </h2>
+	<div class = "paragraphs">
 	<h3> "< p >" </h3>
 		<p> We use paragraphs to write out regular text</p>
+	</div>
+	<div class = "headers">
 	<h3> "< h >" </h3>
 		<p> We use headers for titles and subtitles </p>
+	</div>
+	<div class = "forms">
 	<h3> "< form >"</h3>
 		<p> Forms allow us to collect information from users </p>
-	<h3> " < img >"</h3>
+	</div>
+	<div class = "Image">
+		<h3> "< img >"</h3>
 		<p> Images can be inserted into our website </p>
-	<form>
-		<input type = "text" name = "firstchar">1</input>
-		<input type = "text" name = "secondchar">2</input>
-		<input type = "text" name = "thirdchar">3</input>
+	</div>
+	<div class = "Bold">
+	<h3> "< b >"</h3>
+		<p> Text can bolded for more emphasis</p>
+	</div>
+	<div class = "List">
+	<h3> "< list >"</h3>
+		<li> Lists Contain Organized Descriptioins</li>
+		<li> Usually in a Bullet Point Format </li>
+	</div>
+	<div id = "startbuttn">
+	<button type = "button" id = "start" onclick= "stepOne()">Start!</button>
+	<h1> ENTERING SECRET SPY DATABASE </h1>
+	</div>
+	<p id = "PartOne">Our goal is to make sure Computer Science reigns supreme at USC.</p>
+	<button id = "CallFunction2" onclick = "stepTwo()"> NEXT. </button>
+	<h4 id = "CSHeader"> UCLA Computer Science Data Lab </h4>
+	<button id = "CallFunction3" onclick = "stepThree()"> NEXT. </button>
+	<li> Information </li>
+	<li> Opening Hour: 8am </li>
+	<li id = "ListTwo"> Closing Hour: 8pp </li>
+	<h5 id = "header five"> Be sure to stop by and say hello! <h5>
+	<form id = "finalcode">
 		<div class = "submit">
-		<input type = "submit">Go!</input>
+		<input type = "text" id= "firstchar">1</input>
+		<input type = "text" id = "secondchar">2</input>
+		<input type = "text" id = "thirdchar">3</input>
+		<input type = "text" id = "fourthchar">4</input>
+		<button type = "button" onclick= "submission()"> <b>Submit</b></button>
 		</div>
 	</form>
+	
 </body>
