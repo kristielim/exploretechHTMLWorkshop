@@ -1,23 +1,68 @@
-<!DOCTYPE html>
+
+<!DOCTYPE HTML>
 <html>
-<head>
-	<title></title>
-</head>
-<body>
-	<h1 id="shouldBeRedText" style="color: blue">SmartyPants High School</h1>
-	<button id="doneButton">Click when done!</button>
-	<script>
-		const shouldBeRedText = document.getElementById('shouldBeRedText');
-		const doneButton = document.getElementById('doneButton');
-		doneButton.onclick = function () {
-			if (shouldBeRedText.style.color === 'red') {
-				alert('Level 2 unlocked!');
-				window.location.replace(atob('bGV2ZWwyLmh0bWw='));
-			}
-			else {
-				alert('Not everything has been changed yet :(');
-			}
-		}
-	</script>
-</body>
+	<head>
+		<title>Scavenger Hunt</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+
+	<!--This is a comment and doesn't affect the rest of the code! This is a helpful way for programmers to leave notes in their programs so that they can better understand what their code in the future or so that other reading the code have an easier time. Look for these notes to guide you through this scavenger hunt!-->
+
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<header>
+
+							<!--It looks like some of this stuff isn't right! To reclaim your profile you might want to change back the picture, your name, and correct your title. Change the url link after in the src part of the img tag to something that defines you a little bit better. Next, change your name in the h1 tag and the description in the p tag. You can also add a short description in the textarea tag to complete your profile.-->
+
+							<span class="avatar"><img src="https://pbs.twimg.com/profile_images/980681269859241984/-4cD6ouV_400x400.jpg" alt="" /></span>
+							<h1>Mr Pusheen</h1>
+							<p>Hacker</p>
+							<textarea name="message" id="message">You've been hacked! Better watch your back.</textarea>
+						</header>
+
+						<hr>
+						
+						<!-- Uh oh! It looks like some links have been messed up as well. To change these links back, modify the links after href in the a tag. These can be changed to link your own personal social media!-->
+
+						<footer>
+							<ul class="icons">
+								<li><a href="https://pusheen.com/" class="fa-laptop">Website</a></li>
+								<li><a href="https://twitter.com/Pusheen" class="fa-twitter">Twitter</a></li>
+								<li><a href="https://www.instagram.com/pusheen/?hl=en" class="fa-instagram">Instagram</a></li>
+							</ul>
+						</footer>
+
+						<!--Great work! Now that you're all done here, remove "disabled" from the class below and click the link to progress and see what other fun stuff html and css can do.-->
+						
+						<ul class="actions special">
+							<li><a href="./exploreTechlev2.html" class="button disabled">Go to level 2!</a></li>
+						</ul>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>Mr Pusheen</li><li></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+
+	</body>
 </html>
