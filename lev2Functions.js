@@ -65,7 +65,8 @@ function stepThree()
 function stepFour()
 {
 	var listItem = document.getElementById('ListTwo').innerHTML;
-	if (listItem === "Closing Hour: 8pm")
+	console.log(listItem);
+	if (listItem.includes("Closing Hour: 8pm"))
 	{
 		window.alert("Correct! Your third number is 6.");
 		window.alert("We want to change the below haeder to a bigger font! Increase the font by at least double");
