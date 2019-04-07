@@ -107,6 +107,6 @@ function submission(){
 	{
 		window.alert("You have succeeded")
 		window.alert("Did you know that the internet was invented at UCLA in 1969?")
-
+		window.location.href = atob("Y2F0Lmh0bWw=");
 	}
 }
