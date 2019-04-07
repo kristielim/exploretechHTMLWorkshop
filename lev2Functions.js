@@ -88,7 +88,10 @@ function stepFive()
 	window.alert ("Correct! Your final number is 9.");
 	window.alert("Input your data into the form!");
 	}
+	else
+	{
 	window.alert ("Is that big enough?");
+	}
 }
 
 function submission(){
