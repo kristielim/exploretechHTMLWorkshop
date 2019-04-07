@@ -41,7 +41,7 @@ function stepTwo()
 	}
 	else
 	{
-		window.alert( "Try Again. USC  >  UCLA.");
+		window.alert( "Try Again. USC  <  UCLA.");
 	}
 }
 
@@ -65,8 +65,7 @@ function stepThree()
 function stepFour()
 {
 	var listItem = document.getElementById('ListTwo').innerHTML;
-	console.log(listItem);
-	if (listItem.includes("Closing Hour: 8pm"))
+	if (listItem === "Closing Hour: 8pm")
 	{
 		window.alert("Correct! Your third number is 6.");
 		window.alert("We want to change the below haeder to a bigger font! Increase the font by at least double");
@@ -108,6 +107,6 @@ function submission(){
 	{
 		window.alert("You have succeeded")
 		window.alert("Did you know that the internet was invented at UCLA in 1969?")
-		window.location.href = atob("Y2F0Lmh0bWw=");
+
 	}
 }
