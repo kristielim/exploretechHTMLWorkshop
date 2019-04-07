@@ -68,7 +68,7 @@ function stepFour()
 	if (listItem.includes("Closing Hour: 8pm"))
 	{
 		window.alert("Correct! Your third number is 6.");
-		window.alert("We want to change the below haeder to a bigger font! Increase the font by at least double");
+		window.alert("We want to change the below header to a bigger font! Increase the font by at least double");
 	}
 	else
 	{
@@ -83,7 +83,9 @@ function stepFive()
 {
 	var header2 = document.getElementById('header five');
 	var header2Style = getComputedStyle(header2);
-	if (header2Style.fontSize >= 20)
+	var fontSizeInPixels = header2Style.fontSize;
+	var fontSize = parseInt(fontSizeInPixels.slice(0, -2));
+	if (fontSize >= 20)
 	{
 	window.alert ("Correct! Your final number is 9.");
 	window.alert("Input your data into the form!");
