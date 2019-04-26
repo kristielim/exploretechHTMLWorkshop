@@ -9,10 +9,10 @@ function isCatSmall() {
 	return false;
 }
 
-function isTextBlack() {
-	const color = $('.blog-text').css('color');
+function isTextPink() {
+	const color = $('#blog-text-cute').css('color');
 	console.log(color);
-	if (color === 'rgb(0, 0, 0)') {
+	if (color === 'rgb(255, 192, 203)') {
 		return true;
 	}
 	return false;
@@ -38,7 +38,7 @@ function isTextItalics() {
 
 function areCatsNotDizzy() {
 	const animation = $('#box-cat').css('animation');
-	if (!animation.includes('dizzy')) {
+	if (animation.includes('jump') && !animation.includes('dizzy')) {
 		return true;
 	}
 	return false;
@@ -60,9 +60,9 @@ const steps = [
 		failMessage: 'Cat is still too big.'
 	},
 	{
-		instruction: 'The cat is starting a blog, but the pink text is a little hard to read. Change it to black!',
-		isCompleted: isTextBlack,
-		failMessage: 'Text is not black.'
+		instruction: 'The cat is starting a blog, but the black text is not cute enough. Change it to pink!',
+		isCompleted: isTextPink,
+		failMessage: 'Text is not pink.'
 	},
 	{
 		instruction: 'Oh no! Fix the typo!',
@@ -76,7 +76,8 @@ const steps = [
 	},
 	{
 		instruction: `These small cats are so dizzy. 
-						Help them out by changing their animation to jump.`,
+						Change their animation to jump!
+						Hyper cats can jump every 0.5s.`,
 		isCompleted: areCatsNotDizzy,
 		failMessage: `Oops they're still dizzy.`
 	},
