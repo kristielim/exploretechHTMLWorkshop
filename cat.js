@@ -89,6 +89,7 @@ const steps = [
 ];
 
 function nextStep() {
+	amplitude.getInstance().logEvent('COMPLETED_STEP');
 	// hide current step
 	$(`#step-${index}`).hide();
 
