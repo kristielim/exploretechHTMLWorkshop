@@ -108,6 +108,8 @@ function nextStep() {
 }
 
 $(window).on('load', function () {
+	amplitude.getInstance().logEvent('CAT_PAGE_LOADED');
+
 	// update instructions
 	$('#instructions').text(steps[index].instruction);
 
